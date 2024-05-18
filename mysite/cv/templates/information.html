@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <title>Document</title>
+    
+</head>
+
+<body>
+    <div>
+        <h1>Informations of {{object.name}} </h1>
+        <hr>
+        
+        <p>Phone : {{object.phone}}</p>
+        <hr>
+        
+        <p >Email : {{object.email}} </p>
+        <hr>
+        
+        <p>Skills : {{object.skills}} </p>
+        <hr>
+        
+        <p>Experience : {{object.experience}} </p>
+        <hr>
+
+        <p>Education :{{object.education}} </p>
+
+        <a href="{% url 'edit' object.id %}"><button>Edit</button> </a>
+        <a href="{% url 'delete' object.id %}"><button>Delete</button> </a>
+    </div>
+</body>
+</html>
